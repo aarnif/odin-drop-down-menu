@@ -1,9 +1,15 @@
-import sumOfTwoNumbers from "./modules/example.js";
+import toggleDropDownMenu from "./modules/toggleDropDownMenu.js";
 
 const app = () => {
-  const a = 1;
-  const b = 2;
-  console.log(`The sum of integers ${a} and ${b} is ${sumOfTwoNumbers(a, b)}`);
+  const menuIcons = document.querySelectorAll(".menu-icon");
+  console.log(menuIcons);
+
+  menuIcons.forEach((menuIcon) => {
+    menuIcon.addEventListener("click", (event) => {
+      const id = event.target.id;
+      toggleDropDownMenu(menuIcon, id);
+    });
+  });
 };
 
 export default app;

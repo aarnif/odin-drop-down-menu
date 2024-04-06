@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply m-0 box-border;
+  }
+  #menu {
+    @apply flex justify-between items-center p-4;
+  }
+  .menu-header {
+    @apply flex-grow text-2xl text-center;
+  }
+  .menu-items {
+    @apply flex-grow flex justify-around items-center text-xl;
+  }
+  .menu-item {
+    @apply w-[150px] flex justify-start;
+  }
+  .menu-button {
+    @apply pl-2;
+  }
+  .drop-down-menu {
+    @apply absolute top-10 pt-2;
+  }
+}
