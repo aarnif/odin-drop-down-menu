@@ -4,16 +4,22 @@
 
 @layer base {
   body {
-    @apply m-0 box-border;
+    @apply m-0 box-border bg-slate-50 text-slate-800;
   }
-  #menu {
-    @apply flex justify-between items-center p-4;
+  .transition-effect {
+    @apply transition duration-300 ease-in-out;
+  }
+  .header {
+    @apply fixed w-full shadow-lg bg-white;
   }
   .menu-header {
-    @apply flex-grow text-2xl text-center;
+    @apply flex-grow text-4xl text-center font-extrabold;
+  }
+  #menu {
+    @apply flex justify-between items-center py-4 px-12;
   }
   .menu-items {
-    @apply flex-grow flex justify-around items-center text-xl;
+    @apply flex-grow flex justify-around items-center text-xl font-bold;
   }
   .menu-item {
     @apply w-[150px] flex justify-start;
@@ -21,7 +27,23 @@
   .menu-button {
     @apply pl-2;
   }
+  .menu-icon {
+    @apply w-6 h-6 transition-effect;
+  }
+  .menu-icon.rotate {
+    @apply rotate-180;
+  }
   .drop-down-menu {
-    @apply absolute top-10 pt-2;
+    @apply absolute top-14 bg-white rounded-lg shadow-lg invisible opacity-0 font-medium 
+    transition-effect;
+  }
+  .drop-down-menu.active {
+    @apply visible opacity-100;
+  }
+  .drop-down-menu-item {
+    @apply w-full max-w-56;
+  }
+  .drop-down-menu-button {
+    @apply w-full py-2 px-4 text-left hover:bg-slate-100;
   }
 }
