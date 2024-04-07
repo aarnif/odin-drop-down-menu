@@ -6,11 +6,20 @@
   body {
     @apply m-0 box-border bg-slate-50 text-slate-800;
   }
+  #wrapper {
+    @apply flex flex-col h-[200vh];
+  }
   .transition-effect {
     @apply transition duration-300 ease-in-out;
   }
   .header {
-    @apply fixed w-full shadow-lg bg-white;
+    @apply static w-full shadow-lg bg-white transition-effect;
+  }
+  .header.show {
+    @apply fixed translate-y-[0px];
+  }
+  .header.hide {
+    @apply fixed translate-y-[-100px];
   }
   .menu-header {
     @apply flex-grow text-4xl text-center font-extrabold;
@@ -44,6 +53,6 @@
     @apply w-full max-w-56;
   }
   .drop-down-menu-button {
-    @apply w-full py-2 px-4 text-left hover:bg-slate-100;
+    @apply w-full py-2 px-4 text-left hover:bg-slate-100 transition-effect;
   }
 }
