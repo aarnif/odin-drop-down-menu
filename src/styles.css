@@ -59,12 +59,24 @@
     @apply flex-grow flex flex-col items-center justify-center;
   }
   .article {
-    @apply max-w-3xl p-8;
+    @apply max-w-3xl p-8 mb-20;
   }
   .title {
     @apply m-20 text-4xl font-bold text-center;
   }
   .body-text {
     @apply flex-grow py-8 text-lg text-slate-700;
+  }
+  .footer {
+    @apply fixed bottom-0 w-full flex justify-center items-center shadow-lg bg-white;
+  }
+  .footer-content {
+    @apply flex justify-center items-center py-2;
+  }
+  .footer-text {
+    @apply pr-2 text-lg font-bold;
+  }
+  .github-icon {
+    @apply w-6 fill-current hover:animate-rotate-and-scale;
   }
 }

@@ -20,6 +20,27 @@ const handleShowHideHeader = () => {
   scrollPosition = window.scrollY;
 };
 
+const handleShowHideFooter = () => {
+  const footer = document.querySelector(".footer");
+  const bottomOfthePage =
+    window.innerHeight + Math.round(window.scrollY) >=
+    document.body.offsetHeight;
+
+  if (bottomOfthePage) {
+    footer.className = "footer";
+    return;
+  }
+
+  if (window.scrollY > scrollPosition - window.scrollY) {
+    footer.classList.remove("show");
+    footer.classList.add("hide");
+  } else {
+    footer.classList.remove("hide");
+    footer.classList.add("show");
+  }
+  scrollPosition = window.scrollY;
+};
+
 const app = () => {
   const menuIcons = document.querySelectorAll(".menu-icon");
   console.log(menuIcons);
@@ -32,6 +53,7 @@ const app = () => {
   });
 
   window.addEventListener("scroll", handleShowHideHeader);
+  window.addEventListener("scrollend", handleShowHideFooter);
 };
 
 export default app;
