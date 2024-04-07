@@ -7,7 +7,7 @@
     @apply m-0 box-border bg-slate-50 text-slate-800;
   }
   #wrapper {
-    @apply flex flex-col h-[200vh];
+    @apply flex flex-col min-h-screen;
   }
   .transition-effect {
     @apply transition duration-300 ease-in-out;
@@ -54,5 +54,17 @@
   }
   .drop-down-menu-button {
     @apply w-full py-2 px-4 text-left hover:bg-slate-100 transition-effect;
+  }
+  #content {
+    @apply flex-grow flex flex-col items-center justify-center;
+  }
+  .article {
+    @apply max-w-3xl p-8;
+  }
+  .title {
+    @apply m-20 text-4xl font-bold text-center;
+  }
+  .body-text {
+    @apply flex-grow py-8 text-lg text-slate-700;
   }
 }
