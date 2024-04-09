@@ -1,4 +1,4 @@
-# Weather App
+# Drop-Down Menu
 
 This is a drop-down menu example built with HTML, Tailwind CSS and JavaScript.
 The project is part of the [The Odin Project's](https://www.theodinproject.com/) Full Stack JavaScript Course.
